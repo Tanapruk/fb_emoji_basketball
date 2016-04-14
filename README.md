@@ -1,7 +1,6 @@
 # Facebook emoji Basketball Script
 Python shell script to automate playing Facebook basketball
-
-
+[![Facebook Basketball Shooter](http://img.youtube.com/vi/DkmA7ZoSWr4/0.jpg)](http://www.youtube.com/watch?v=DkmA7ZoSWr4)
 
 ### Instruction
 
@@ -13,7 +12,7 @@ Python shell script to automate playing Facebook basketball
 * [uiautomator](https://github.com/xiaocong/uiautomator)
 
 
-[![Facebook Basketball Shooter](http://img.youtube.com/vi/DkmA7ZoSWr4/0.jpg)](http://www.youtube.com/watch?v=DkmA7ZoSWr4)
+
   
 
 

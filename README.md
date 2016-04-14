@@ -12,6 +12,8 @@ Python shell script to automate playing Facebook basketball
 * Python
 * [uiautomator](https://github.com/xiaocong/uiautomator)
 
+
+[![Facebook Basketball Shooter](http://img.youtube.com/vi/DkmA7ZoSWr4/0.jpg)](http://www.youtube.com/watch?v=DkmA7ZoSWr4)
   
 
 

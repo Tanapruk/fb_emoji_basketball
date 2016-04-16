@@ -13,7 +13,7 @@ Python shell script to automate playing Facebook basketball. It is a script that
 ####Instruction
 * Plug your Android device to your PC and connect to ADB
 * Launch the basketball game
-* Run the script
+* Run the script (Required python, uiautomate and adb)
 * Enjoy
 
 #### Level Support

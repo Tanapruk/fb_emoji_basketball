@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from uiautomator import device as d
 import os
@@ -32,10 +32,10 @@ def get_score():
     sleep(0.3)
     if ui_score.wait.exists(timeout=1000):
         score = ui_score.info.get("text")
-        print "score ", score
+        print("score ", score)
         return int(score)
     else:
-        print "score gone"
+        print("score gone")
         return -1
 
 
@@ -113,7 +113,7 @@ def swipe_up():
 
 
 def shoot_to(x, y):
-    print "target", x, y
+    print("target", x, y)
     d.drag(get_ball_middle_x(), get_ball_middle_y(), x, y, steps=10)
 
 
@@ -128,12 +128,12 @@ def shoot_moving_rim(ref_start_x, ref_start_y, offset):
 
 
 def shoot_to_right(ref_start_x, ref_start_y, offset):
-    print "shoot to the right ", offset
+    print("shoot to the right ", offset)
     shoot_moving_rim(ref_start_x, ref_start_y, offset)
 
 
 def shoot_to_left(ref_start_x, ref_start_y, offset):
-    print "shoot to the left", "-", offset
+    print("shoot to the left", "-", offset)
     shoot_moving_rim(ref_start_x, ref_start_y, -offset)
 
 
@@ -164,10 +164,10 @@ class Level:
 
 def get_rim_momentum(avg_x_diff):
     if avg_x_diff < 0:
-        print "L>>>>>R"
+        print("L>>>>>R")
         return RimMomentum.MOVING_LEFT_TO_RIGHT
     elif avg_x_diff > 0:
-        print "L<<<<<R"
+        print("L<<<<<R")
         return RimMomentum.MOVING_RIGHT_TO_LEFT
     else:
         return RimMomentum.STILL
@@ -253,7 +253,7 @@ class RimX:
         self.diff_x_array = get_diff_array(self.x_array)
         self.avg_x_diff = get_avg(self.diff_x_array)
         self.avg_x = get_avg(self.x_array)
-        print "x", self.x_array, "speed", self.diff_x_array
+        print("x", self.x_array, "speed", self.diff_x_array)
 
     def get_first_x(self):
         return self.x_array[0]
@@ -276,7 +276,7 @@ class Rim:
         self.avg_y_diff = get_avg(self.diff_y_array)
         self.avg_x = get_avg(self.x_array)
         self.avg_y = get_avg(self.y_array)
-        print "x", self.x_array, "speed", self.diff_x_array, "avg speed ", self.avg_x_diff, "avg loc ", self.avg_x
+        print("x", self.x_array, "speed", self.diff_x_array, "avg speed ", self.avg_x_diff, "avg loc ", self.avg_x)
 
     def get_first_x(self):
         return self.x_array[0]
@@ -328,8 +328,8 @@ def get_w_p(int_x):
 def shoot_with_delay(target_x, target_y, int_x, start_x, end_x, total_delay, l_to_r):
     if start_x <= int_x <= end_x:
         int_delay = get_delay(int_x, start_x, end_x, total_delay, l_to_r)
-        print start_x, "(", get_w_p(start_x), ")>x<", int_x, "(", get_w_p(int_x), ")", end_x, "(", get_w_p(
-            end_x), ") Delay by", int_delay
+        print(start_x, "(", get_w_p(start_x), ")>x<", int_x, "(", get_w_p(int_x), ")", end_x, "(", get_w_p(
+            end_x), ") Delay by", int_delay)
         sleep(int_delay)
         shoot_to(target_x, target_y)
         sleep(int_delay)
@@ -401,7 +401,7 @@ def shoot_by_level():
         return BallStatus.STOP
     else:
 
-        print "Don't shoot"
+        print("Don't shoot")
         return BallStatus.NO_SHOT
 
 
@@ -417,18 +417,18 @@ def shoot_when_ready():
 
 def skip_beat():
     int_random = random.random()
-    print "pause ", int_random
+    print("pause ", int_random)
     sleep(int_random)
 
 
 def loop_shooting():
-    print "start loop shooting"
+    print("start loop shooting")
     while 0 <= get_score() < 50:
         shoot_when_ready()
 
-        print "finish a shot"
+        print("finish a shot")
     else:
-        print "end shooting"
+        print("end shooting")
 
 
 def shoot_basketball():
@@ -442,7 +442,7 @@ def shoot_basketball():
 
 def print_dumb():
     while True:
-        print get_rim_middle_x(), get_rim_middle_y()
+        print(get_rim_middle_x(), get_rim_middle_y())
 
 
 shoot_basketball()

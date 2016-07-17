@@ -1,7 +1,7 @@
 # Facebook emoji Basketball Script
 
 Python shell script to automate playing Facebook basketball. It is a script that use uiautomator python
-[![Facebook Basketball Shooter](http://i.giphy.com/AC9OHzx1RrEpW.gif)](http://www.youtube.com/watch?v=DkmA7ZoSWr4)
+[![Facebook Basketball Shooter](https://github.com/Tanapruk/fb_emoji_basketball/blob/master/fb_demo.gif)](http://www.youtube.com/watch?v=DkmA7ZoSWr4)
 
 ####Requirement
 * Android phone with root access
